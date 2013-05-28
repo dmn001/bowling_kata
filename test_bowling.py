@@ -38,5 +38,9 @@ class BowlingTest(unittest.TestCase):
       self.rollMany(17, 0)
       self.assertEqual(24, self.g.score())
 
+   def test_perfectGame(self):
+      self.rollMany(12, 10)
+      self.assertEqual(300, self.g.score())
+
 if __name__ == "__main__":
 	unittest.main()
