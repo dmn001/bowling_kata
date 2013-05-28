@@ -9,8 +9,9 @@ class Game(object):
 		score = 0
 		i = 0
 		for frame in range(10):
-			score += self.__rolls[i] + self.__rolls[i+1]
+			if self.__rolls[i] + self.__rolls[i+1] == 10:
+				score += 10.0 + self.__rolls[i+2]
+			else:
+				score += self.__rolls[i] + self.__rolls[i+1]
 			i += 2
 		return score
-
-		

@@ -18,12 +18,12 @@ class BowlingTest(unittest.TestCase):
       self.rollMany(20,1)
       self.assertEqual(20, self.g.score())
 
-   # def test_oneSpare(self):
-   #    self.g.roll(5)
-   #    self.g.roll(5)
-   #    self.g.roll(3)
-   #    self.rollMany(17, 0)
-   #    self.assertEqual(16, self.g.score())
+   def test_oneSpare(self):
+      self.g.roll(5)
+      self.g.roll(5)
+      self.g.roll(3)
+      self.rollMany(17, 0)
+      self.assertEqual(16, self.g.score())
 
 if __name__ == "__main__":
 	unittest.main()
