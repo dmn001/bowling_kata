@@ -1,8 +1,16 @@
 class Game(object):
-	__score = 0
+	def __init__(self):
+		self.__rolls = []
 
 	def roll(self, pins):
-		self.__score += pins
+		self.__rolls.append(pins)
 	
 	def score(self):
-		return self.__score
+		score = 0
+		i = 0
+		for frame in range(10):
+			score += self.__rolls[i] + self.__rolls[i+1]
+			i += 2
+		return score
+
+		
