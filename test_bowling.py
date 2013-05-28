@@ -28,5 +28,12 @@ class BowlingTest(unittest.TestCase):
       self.rollMany(17, 0)
       self.assertEqual(16, self.g.score())
 
+   def test_oneStrike(self):
+      self.g.roll(10)
+      self.g.roll(3)
+      self.g.roll(4)
+      self.rollMany(16, 0)
+      self.assertEqual(24, self.g.score())
+
 if __name__ == "__main__":
 	unittest.main()
